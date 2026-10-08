@@ -1,0 +1,174 @@
+/* About page only: "Get in touch" banner.
+   Design ported 1:1 from konark-contact-banner.html and scoped under .gt */
+
+.gt {
+  --g: #07382b;
+  --g2: #0b4a38;
+  --o: #ee8227;
+  --o2: #f6a45c;
+  position: relative;
+  overflow: hidden;
+  background: var(--g);
+  font-family: var(--font-body, "Hanken Grotesk", system-ui, sans-serif);
+  color: #fff;
+}
+.gt * { box-sizing: border-box; }
+
+.gt::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  height: 5px;
+  background: linear-gradient(90deg, var(--o2), var(--o), #146149);
+  z-index: 4;
+}
+
+.gt-bg {
+  position: absolute;
+  inset: 0;
+  background: url("/assets/about-get-in-touch-bg.jpg") 50% 62% / cover;
+  transform: scale(1.04);
+  animation: gt-zoom 24s ease-in-out infinite alternate;
+}
+@keyframes gt-zoom { to { transform: scale(1.14); } }
+
+.gt-ov {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(180deg, rgba(7, 56, 43, 0.9), rgba(7, 56, 43, 0.72)),
+    repeating-linear-gradient(135deg, transparent 0 22px, rgba(246, 164, 92, 0.05) 22px 23px);
+}
+.gt-glow {
+  position: absolute;
+  right: -120px;
+  bottom: -160px;
+  width: 520px;
+  height: 520px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(238, 130, 39, 0.38), transparent 65%);
+  pointer-events: none;
+}
+
+/* Container matches the site (max-w-7xl + px-5 / px-8) so the text lines up with the page above */
+.gt-in {
+  position: relative;
+  z-index: 2;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 64px 20px 68px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.gt-eye {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.24em;
+  color: var(--o);
+}
+.gt-eye::before { content: ""; width: 34px; height: 2px; background: var(--o); }
+
+.gt h2 {
+  margin: 14px 0 0;
+  max-width: 14em;
+  font-family: var(--font-display, "Newsreader", Georgia, serif);
+  font-weight: 600;
+  font-size: clamp(27px, 4.6vw, 62px);
+  line-height: 1.1;
+  letter-spacing: -0.015em;
+  color: #fff;
+}
+.gt h2 em { font-style: normal; color: var(--o2); white-space: nowrap; }
+
+.gt-btn {
+  position: relative;
+  align-self: flex-start;
+  display: inline-flex;
+  align-items: center;
+  gap: 22px;
+  padding: 10px 10px 10px 30px;
+  background: var(--o);
+  color: var(--g);
+  font-size: 17px;
+  font-weight: 500;
+  text-decoration: none;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 14px 34px rgba(238, 130, 39, 0.4);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.gt-btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: -60%;
+  width: 40%;
+  background: linear-gradient(100deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+  transform: skewX(-20deg);
+  transition: left 0.6s;
+}
+.gt-ar {
+  position: relative;
+  width: 46px;
+  height: 46px;
+  border-radius: 8px;
+  background: var(--g2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.3s;
+}
+.gt-ar svg {
+  width: 20px;
+  height: 20px;
+  fill: none;
+  stroke: var(--o2);
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  transition: transform 0.3s, stroke 0.3s;
+}
+.gt-btn:hover,
+.gt-btn:focus-visible {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 40px rgba(238, 130, 39, 0.55);
+  outline: none;
+}
+.gt-btn:hover::before,
+.gt-btn:focus-visible::before { left: 120%; }
+.gt-btn:hover .gt-ar,
+.gt-btn:focus-visible .gt-ar { background: #fff; }
+.gt-btn:hover svg,
+.gt-btn:focus-visible svg { stroke: var(--g); transform: translate(3px, -3px); }
+
+@media (min-width: 900px) {
+  .gt-ov {
+    background:
+      linear-gradient(90deg, rgba(7, 56, 43, 0.94) 0%, rgba(7, 56, 43, 0.72) 50%, rgba(7, 56, 43, 0.38) 100%),
+      repeating-linear-gradient(135deg, transparent 0 22px, rgba(246, 164, 92, 0.05) 22px 23px);
+  }
+  .gt-in {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 48px;
+    padding: 112px 32px 116px;
+  }
+  .gt-eye { font-size: 14px; }
+  .gt-btn { align-self: center; font-size: 18px; padding: 12px 12px 12px 36px; flex: none; }
+  .gt-ar { width: 52px; height: 52px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .gt-bg { animation: none; }
+  .gt-btn,
+  .gt-btn::before { transition: none; }
+}

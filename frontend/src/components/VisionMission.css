@@ -1,0 +1,131 @@
+/* About page: Our Vision / Our Mission.
+   Design ported 1:1 from konark-vision-mission.html and scoped under .vm */
+
+.vm {
+  --g: #0b4a38;
+  --g2: #146149;
+  --o: #ee8227;
+  --o2: #f6a45c;
+  background: #f2f5f3;
+  padding: 56px 20px;
+  font-family: var(--font-body, "Hanken Grotesk", system-ui, sans-serif);
+}
+.vm * { box-sizing: border-box; }
+
+.vm-wrap {
+  max-width: 1216px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+}
+
+.vm-card {
+  border-radius: 24px;
+  padding: 28px 20px 12px;
+  position: relative;
+  overflow: hidden;
+}
+.vm-card::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 5px;
+}
+.vm-v { background: var(--g); color: #eaf1ed; }
+.vm-v::before { background: var(--o); }
+.vm-m { background: #fff; color: #16352c; border: 1px solid #dde3e0; }
+.vm-m::before { background: var(--g2); }
+
+/* Large faint line-icon in the corner: ties each card to its heading icon */
+.vm-wm {
+  position: absolute;
+  right: -34px;
+  top: -34px;
+  width: 210px;
+  height: 210px;
+  opacity: 0.07;
+  pointer-events: none;
+  z-index: 0;
+}
+.vm .vm-wm svg { width: 100%; height: 100%; stroke-width: 0.7; }
+.vm-h,
+.vm-list { position: relative; z-index: 1; }
+
+.vm-h { display: flex; align-items: center; gap: 14px; margin: 0 0 12px; }
+.vm-hi {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: none;
+}
+.vm-v .vm-hi { background: rgba(246, 164, 92, 0.16); }
+.vm-m .vm-hi { background: #fcebdd; }
+.vm-h h2 {
+  margin: 0;
+  font-family: var(--font-display, "Newsreader", Georgia, serif);
+  font-weight: 500;
+  font-size: 28px;
+  line-height: 1.1;
+  letter-spacing: -0.015em;
+}
+.vm-m h2 span { color: var(--o); }
+
+.vm svg { width: 22px; height: 22px; fill: none; stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; }
+.vm-hi svg { width: 26px; height: 26px; }
+.vm-v svg { stroke: var(--o2); }
+.vm-m svg { stroke: var(--o); }
+
+.vm-list { list-style: none; margin: 0; padding: 0; }
+.vm-list li {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 14px 8px;
+  border-bottom: 1px solid;
+  font-size: 15px;
+  line-height: 1.5;
+  border-radius: 12px;
+  transition: transform 0.25s, background 0.25s;
+}
+.vm-v li { border-color: rgba(255, 255, 255, 0.14); }
+.vm-m li { border-color: #e6ece8; }
+.vm-list li:last-child { border-bottom: 0; }
+
+.vm-ic {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: none;
+  transition: background 0.25s, transform 0.35s;
+}
+.vm-v .vm-ic { background: var(--g2); }
+.vm-m .vm-ic { background: #fcebdd; }
+
+.vm-v li:hover { transform: translateX(6px); background: rgba(255, 255, 255, 0.05); }
+.vm-m li:hover { transform: translateX(6px); background: #eef4f0; }
+.vm-list li:hover .vm-ic { background: var(--o); transform: rotate(-8deg) scale(1.08); }
+.vm-m li:hover .vm-ic { background: var(--g2); }
+.vm-list li:hover .vm-ic svg { stroke: #fff; }
+
+@media (min-width: 860px) {
+  .vm { padding: 88px 32px; }
+  .vm-wrap { grid-template-columns: 1fr 1fr; gap: 24px; }
+  .vm-card { padding: 44px 40px 24px; }
+  .vm-h h2 { font-size: 34px; }
+  .vm-list li { font-size: 16px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .vm-list li,
+  .vm-ic { transition: none; }
+  .vm-list li:hover { transform: none; }
+}

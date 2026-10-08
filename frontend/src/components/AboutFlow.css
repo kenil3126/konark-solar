@@ -1,0 +1,260 @@
+/* About page: intro + Energy Generation -> Storage -> Consumption flow.
+   Design ported 1:1 from konark-about-flow.html and scoped under .ae.
+   Left padding matches the site container (max-w-7xl + px-8) so text aligns with the banner and navbar. */
+
+.ae {
+  --g: #07382b;
+  --g2: #1b5a47;
+  --o: #ee8227;
+  --o2: #f6a45c;
+  background: #f2f5f3;
+  font-family: var(--font-body, "Hanken Grotesk", system-ui, sans-serif);
+  color: #16352c;
+  overflow: hidden;
+  position: relative;
+}
+.ae * { box-sizing: border-box; }
+
+.ae-wrap { display: grid; grid-template-columns: 1fr; margin: 0 auto; }
+
+.ae-txt { padding: 56px 22px 40px; position: relative; z-index: 2; }
+
+.ae h2 {
+  margin: 0 0 22px;
+  font-family: var(--font-display, "Newsreader", Georgia, serif);
+  font-weight: 600;
+  font-size: 38px;
+  line-height: 1.05;
+  letter-spacing: -0.015em;
+  color: #0b4a38;
+}
+.ae h2::after {
+  content: "";
+  display: block;
+  width: 52px;
+  height: 3px;
+  margin-top: 18px;
+  background: var(--o);
+}
+
+.ae-p1 {
+  margin: 0 0 18px;
+  font-family: var(--font-display, "Newsreader", Georgia, serif);
+  font-size: 20px;
+  line-height: 1.65;
+  color: #30483f;
+  max-width: 30em;
+}
+.ae-p1 em { font-style: normal; color: #b85d16; }
+
+.ae-p2 {
+  margin: 0;
+  font-size: 15px;
+  line-height: 1.75;
+  color: #56635e;
+  max-width: 34em;
+}
+
+.ae-val {
+  max-width: 30em;
+  margin-top: 34px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(11, 74, 56, 0.18);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 14px;
+  font-family: var(--font-body, "Hanken Grotesk", system-ui, sans-serif);
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.2em;
+  color: #3c524a;
+}
+.ae-val i { color: var(--o); font-style: normal; }
+
+/* Photo panel: image is blended into the green panel, not dropped in as a box */
+.ae-vis {
+  position: relative;
+  height: 420px;
+  margin: 0 14px 24px;
+  filter: drop-shadow(0 18px 28px rgba(7, 56, 43, 0.2));
+}
+.ae-vis::before {
+  content: "";
+  position: absolute;
+  z-index: 0;
+  inset: -7px 7px 7px -7px;
+  border: 1px solid rgba(238, 130, 39, 0.65);
+  border-radius: 5rem 1.25rem 1.25rem;
+  pointer-events: none;
+}
+.ae-photo {
+  position: absolute;
+  z-index: 1;
+  inset: 0;
+  overflow: hidden;
+  border-radius: 5rem 1.25rem 1.25rem;
+  background: url("/assets/about-flow-solar-bess.jpg") center / cover;
+}
+.ae-photo::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(180deg, var(--g) 0%, rgba(7, 56, 43, 0.25) 14%, transparent 34%, rgba(7, 56, 43, 0.4) 100%),
+    linear-gradient(rgba(7, 56, 43, 0.16), rgba(7, 56, 43, 0.16));
+}
+
+.ae-flow {
+  position: absolute;
+  z-index: 2;
+  left: 14px;
+  right: 14px;
+  bottom: 18px;
+  display: flex;
+  justify-content: space-between;
+  padding: 16px 10px;
+  border-radius: 18px;
+  background: rgba(7, 56, 43, 0.62);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(246, 164, 92, 0.3);
+}
+.ae-flow::before {
+  content: "";
+  position: absolute;
+  left: 12%;
+  right: 12%;
+  top: 41px;
+  height: 0;
+  border-top: 2px dashed rgba(246, 164, 92, 0.5);
+}
+
+.ae-dot {
+  position: absolute;
+  top: 36px;
+  left: 12%;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--o);
+  box-shadow: 0 0 0 5px rgba(238, 130, 39, 0.3);
+  animation: ae-h 3.6s ease-in-out infinite;
+}
+@keyframes ae-h {
+  0% { left: 12%; }
+  100% { left: calc(88% - 10px); }
+}
+
+.ae-n {
+  position: relative;
+  flex: 1;
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.3s;
+  outline: none;
+}
+.ae-n .c {
+  width: 50px;
+  height: 50px;
+  margin: 0 auto 10px;
+  border-radius: 50%;
+  background: var(--g);
+  border: 1px solid var(--o2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.3s, transform 0.4s, border-color 0.3s;
+}
+.ae-n svg {
+  width: 24px;
+  height: 24px;
+  fill: none;
+  stroke: var(--o2);
+  stroke-width: 1.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  transition: stroke 0.3s;
+}
+.ae-n span {
+  display: block;
+  font-family: var(--font-body, "Hanken Grotesk", system-ui, sans-serif);
+  font-size: 10.5px;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  line-height: 1.5;
+  color: #fff;
+}
+.ae-n:hover,
+.ae-n:focus-visible { transform: translateY(-5px); }
+.ae-n:hover .c,
+.ae-n:focus-visible .c { background: var(--o); border-color: var(--o); transform: scale(1.12) rotate(-8deg); }
+.ae-n:hover svg,
+.ae-n:focus-visible svg { stroke: #fff; }
+
+@media (min-width: 960px) {
+  .ae-wrap { grid-template-columns: 1fr 1fr; min-height: 760px; }
+  .ae-txt {
+    padding: 96px clamp(120px, 10vw, 160px) 80px max(32px, calc((100vw - 1280px) / 2 + 32px));
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .ae h2 { font-size: clamp(40px, 3.8vw, 56px); margin-bottom: 28px; }
+  .ae-p1 { font-size: clamp(19px, 1.7vw, 23px); }
+  .ae-p2 { font-size: clamp(15px, 1.1vw, 16px); }
+  .ae-val { max-width: none; font-size: 11.5px; letter-spacing: 0.16em; margin-top: 44px; gap: 6px 16px; }
+
+  .ae-vis {
+    height: auto;
+    min-height: 560px;
+    margin: 48px 32px;
+  }
+  .ae-vis::before,
+  .ae-photo {
+    border-radius: 7rem 1.5rem 1.5rem;
+  }
+  .ae-photo::after {
+    background:
+      linear-gradient(90deg, rgba(7, 56, 43, 0.6) 0%, transparent 30%),
+      linear-gradient(180deg, rgba(7, 56, 43, 0.7) 0%, rgba(7, 56, 43, 0.15) 22%, transparent 40%, rgba(7, 56, 43, 0.4) 100%),
+      linear-gradient(rgba(7, 56, 43, 0.16), rgba(7, 56, 43, 0.16));
+  }
+
+  .ae-flow {
+    left: auto;
+    right: 6%;
+    top: 50%;
+    bottom: auto;
+    transform: translateY(-50%);
+    flex-direction: column;
+    gap: 34px;
+    padding: 30px 34px;
+    width: 250px;
+  }
+  .ae-flow::before {
+    left: 59px;
+    right: auto;
+    top: 56px;
+    bottom: 56px;
+    height: auto;
+    border-top: 0;
+    border-left: 2px dashed rgba(246, 164, 92, 0.5);
+  }
+  .ae-dot { top: 56px; left: 54px; animation: ae-v 3.6s ease-in-out infinite; }
+  @keyframes ae-v {
+    0% { top: 56px; }
+    100% { top: calc(100% - 66px); }
+  }
+
+  .ae-n { display: flex; align-items: center; gap: 18px; text-align: left; flex: none; }
+  .ae-n .c { margin: 0; width: 52px; height: 52px; flex: none; }
+  .ae-n span { font-size: 12.5px; }
+  .ae-n:hover,
+  .ae-n:focus-visible { transform: translateX(6px); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ae-dot { animation: none; }
+  .ae-n,
+  .ae-n .c { transition: none; }
+}

@@ -1,0 +1,150 @@
+/* About page: Our Strengths.
+   Design ported 1:1 from konark-strengths-v2.html and scoped under .sp */
+
+.sp {
+  --g: #0b4a38;
+  --g2: #07382b;
+  --o: #ee8227;
+  --o2: #f6a45c;
+  background: var(--g2);
+  padding: 64px 20px;
+  font-family: var(--font-body, "Hanken Grotesk", system-ui, sans-serif);
+}
+.sp * { box-sizing: border-box; }
+.sp-in { max-width: 1216px; margin: 0 auto; }
+
+.sp-head { text-align: center; margin-bottom: 36px; }
+.sp-head h2 {
+  margin: 0;
+  font-family: var(--font-display, "Newsreader", Georgia, serif);
+  font-weight: 500;
+  font-size: 32px;
+  letter-spacing: -0.015em;
+  color: var(--o);
+}
+
+.sp-panel {
+  position: relative;
+  border: 2px solid #146149;
+  border-radius: 22px;
+  padding: 6px;
+  background: #094033;
+  overflow: hidden;
+  box-shadow: 0 24px 48px rgba(0, 0, 0, 0.35);
+}
+.sp-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 4px;
+  position: relative;
+}
+
+.sp-cell {
+  background: var(--g);
+  padding: 28px 12px 24px;
+  text-align: center;
+  color: #dce8e2;
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+  outline: none;
+  border-radius: 6px;
+  transition: background 0.3s;
+}
+.sp-cell:nth-child(1) { border-top-left-radius: 16px; }
+.sp-cell:nth-child(2) { border-top-right-radius: 16px; }
+.sp-cell:nth-child(5) { border-bottom-left-radius: 16px; }
+.sp-cell:nth-child(6) { border-bottom-right-radius: 16px; }
+
+.sp-cell::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 50% 0%, rgba(238, 130, 39, 0.55), transparent 70%);
+  opacity: 0;
+  transition: opacity 0.35s;
+}
+.sp-cell::after {
+  content: "";
+  position: absolute;
+  left: 14px;
+  right: 14px;
+  bottom: 10px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(246, 164, 92, 0.5), transparent);
+  opacity: 0;
+  transition: opacity 0.35s;
+}
+
+.sp-ic {
+  position: relative;
+  width: 60px;
+  height: 60px;
+  margin: 0 auto 14px;
+  border-radius: 14px;
+  border: 1px solid rgba(246, 164, 92, 0.35);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: rotate(45deg);
+  transition: background 0.3s, border-color 0.3s, transform 0.4s;
+}
+.sp-ic svg {
+  width: 26px;
+  height: 26px;
+  transform: rotate(-45deg);
+  fill: none;
+  stroke: var(--o);
+  stroke-width: 1.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  transition: stroke 0.3s;
+}
+.sp-cell p {
+  position: relative;
+  margin: 14px 0 0;
+  font-size: 14px;
+  line-height: 1.5;
+  font-weight: 500;
+}
+
+.sp-cell:hover::before,
+.sp-cell:focus-visible::before,
+.sp-cell:hover::after,
+.sp-cell:focus-visible::after { opacity: 1; }
+.sp-cell:hover .sp-ic,
+.sp-cell:focus-visible .sp-ic { background: var(--o); border-color: var(--o); transform: rotate(135deg); }
+.sp-cell:hover .sp-ic svg,
+.sp-cell:focus-visible .sp-ic svg { stroke: #fff; }
+
+.sp-sweep {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: linear-gradient(115deg, transparent 40%, rgba(246, 164, 92, 0.16) 50%, transparent 60%);
+  transform: translateX(-120%);
+  animation: sp-sweep 7s ease-in-out infinite;
+}
+@keyframes sp-sweep {
+  0%, 55% { transform: translateX(-120%); }
+  100% { transform: translateX(120%); }
+}
+
+@media (min-width: 860px) {
+  .sp { padding: 96px 32px; }
+  .sp-head { margin-bottom: 52px; }
+  .sp-head h2 { font-size: 42px; }
+  .sp-grid { grid-template-columns: repeat(6, minmax(0, 1fr)); }
+  .sp-cell { padding: 44px 12px 36px; border-radius: 6px; }
+  .sp-cell:nth-child(1) { border-radius: 16px 6px 6px 16px; }
+  .sp-cell:nth-child(6) { border-radius: 6px 16px 16px 6px; }
+  .sp-ic { width: 64px; height: 64px; }
+  .sp-ic svg { width: 28px; height: 28px; }
+  .sp-cell p { font-size: 15px; margin-top: 22px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .sp-sweep { animation: none; }
+  .sp-ic,
+  .sp-cell::before { transition: none; }
+}

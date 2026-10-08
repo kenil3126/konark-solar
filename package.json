@@ -1,0 +1,19 @@
+{
+  "name": "konark-app",
+  "version": "1.0.0",
+  "description": "Full rebuild of the Konark Energy site: React (Vite + Tailwind CSS v4) frontend, Node/Express backend, and Twilio SMS + WhatsApp notifications for new contact form inquiries. Same content, copy and images as the original site — new design, animation and stack.",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "install:all": "npm install --prefix backend && npm install --prefix frontend",
+    "setup": "npm run install:all && node setup-env.js",
+    "dev": "concurrently -n BACKEND,FRONTEND -c blue,green \"npm run dev --prefix backend\" \"npm run dev --prefix frontend\"",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^10.0.5"
+  }
+}
