@@ -36,15 +36,15 @@ export default function AboutFlow() {
     <section className="ae" aria-labelledby="ae-t">
       <div className="ae-wrap">
         <div className="ae-txt">
-          <h2 id="ae-t">Konark Energy</h2>
+          <h2 id="ae-t">Konark Energy Inc.</h2>
           <p className="ae-p1">
-            Konark Energy is a forward-looking renewable energy company committed to reshaping{" "}
-            <em>Energy Generation, Energy Storage and Energy Consumption.</em>
+            Konark Energy is a forward-looking renewable energy company committed to reshaping
+            energy generation, storage, and consumption.
           </p>
           <p className="ae-p2">
-            Our expertise lies in producing high-performance Solar PV Modules and developing
-            advanced Battery Energy Storage Systems (BESS) with focus on providing seamless
-            solutions in blending efficiency, reliability and sustainability.
+            We specialize in manufacturing high-performance PV modules and developing advanced
+            Battery Energy Storage Systems (BESS), delivering integrated solutions that combine
+            efficiency, reliability, and sustainability.
           </p>
           <div className="ae-val">
             EFFICIENCY <i>/</i> RELIABILITY <i>/</i> SUSTAINABILITY

@@ -16,9 +16,11 @@ export default function ProductStack({ items }) {
                 }`}
               >
                 <div>
-                  <p className={`text-base lg:text-lg font-semibold tracking-wide mb-5 ${light ? "text-forest-light" : "text-sun-light"}`}>
-                    {it.eyebrow}
-                  </p>
+                  {it.eyebrow && (
+                    <p className={`text-base lg:text-lg font-semibold tracking-wide mb-5 ${light ? "text-forest-light" : "text-sun-light"}`}>
+                      {it.eyebrow}
+                    </p>
+                  )}
                   <h2 className="font-display text-3xl lg:text-4xl font-medium mb-5 leading-tight">{it.title}</h2>
                   <p className={`leading-relaxed mb-8 max-w-lg ${light ? "text-slate" : "text-white/75"}`}>{it.copy}</p>
                   <Link

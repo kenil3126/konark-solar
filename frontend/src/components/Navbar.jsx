@@ -31,8 +31,8 @@ export default function Navbar() {
             <a href={`mailto:${company.email}`} className="flex items-center gap-1.5 text-white/70 hover:text-white">
               <Mail size={12} /> {company.email}
             </a>
-            <a href={company.phoneHref} className="flex items-center gap-1.5 text-white/70 hover:text-white">
-              <Phone size={12} /> {company.phone}
+            <a href={company.phoneHref} aria-label="Call us" className="text-white/70 hover:text-white">
+              <Phone size={12} />
             </a>
           </div>
         </div>
@@ -208,8 +208,8 @@ export default function Navbar() {
                 <a href={`mailto:${company.email}`} className="flex items-center gap-2">
                   <Mail size={13} /> {company.email}
                 </a>
-                <a href={company.phoneHref} className="flex items-center gap-2">
-                  <Phone size={13} /> {company.phone}
+                <a href={company.phoneHref} aria-label="Call us" className="flex items-center gap-2">
+                  <Phone size={13} />
                 </a>
               </div>
             </div>

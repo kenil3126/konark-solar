@@ -1,5 +1,6 @@
 import Hero from "../components/Hero";
 import Reveal from "../components/Reveal";
+import ImageReveal from "../components/ImageReveal";
 import ProductSpecCard from "../components/ProductSpecCard";
 import ButtonRow from "../components/ButtonRow";
 import CertBadges from "../components/CertBadges";
@@ -30,18 +31,33 @@ export default function SodiumBatteryEnergyStorage() {
         backgroundImage="/assets/hero-sodium-battery-energy-storage-bg.png"
       />
 
-      <section className="py-16 lg:py-20 bg-paper">
-        <div className="mx-auto max-w-4xl px-5 lg:px-8 text-center">
+      <section className="overflow-hidden bg-paper py-16 lg:py-24">
+        <div className="mx-auto grid max-w-7xl items-center gap-12 px-5 lg:grid-cols-2 lg:gap-20 lg:px-8">
           <Reveal>
-            <p className="text-lg text-ink-soft leading-relaxed">
-              Konark is proud to partner with <strong className="text-ink">COSPOWERS</strong>, a
-              global pioneer in sodium battery energy storage systems, to establish cutting edge
-              sodium battery energy storage solutions throughout Asia. Through COSPOWERS, Konark
-              provides a series of{" "}
-              <strong className="text-ink">Power-Sodium, Smart Sodium and Industrial &amp; Commercial Sodium</strong>{" "}
-              battery energy storage systems for flexible deployment and multiple scenarios.
-            </p>
+            <div className="max-w-xl">
+              <p className="mb-5 text-xs font-semibold uppercase tracking-[0.2em] text-forest-light sm:text-sm">
+                COSPOWERS Partnership
+              </p>
+              <p className="border-t border-line pt-6 text-lg leading-relaxed text-ink-soft lg:text-xl">
+                Konark is proud to partner with <strong className="text-ink">COSPOWERS</strong>, a
+                global pioneer in sodium battery energy storage systems, to establish cutting edge
+                sodium battery energy storage solutions throughout Asia. Through COSPOWERS, Konark
+                provides a series of{" "}
+                <strong className="text-ink">Power-Sodium, Smart Sodium and Industrial &amp; Commercial Sodium</strong>{" "}
+                battery energy storage systems for flexible deployment and multiple scenarios.
+              </p>
+            </div>
           </Reveal>
+          <ImageReveal className="relative">
+            <div className="overflow-hidden rounded-2xl border border-forest/10 bg-white shadow-[0_24px_60px_rgba(11,61,49,0.16)]">
+              <img
+                src="/assets/sodium-partnership-image.png"
+                alt="Konark solar and energy storage solutions across residential, commercial, and industrial applications"
+                className="aspect-[3/2] w-full object-cover transition-transform duration-700 hover:scale-[1.015]"
+                loading="lazy"
+              />
+            </div>
+          </ImageReveal>
         </div>
       </section>
 
@@ -58,6 +74,8 @@ export default function SodiumBatteryEnergyStorage() {
           "/assets/sodium-battery-3.png",
         ]}
         imageAlt="Sodium Battery Energy Storage System"
+        imageShape
+        compactTop
       />
 
       <ButtonRow

@@ -15,6 +15,7 @@ export default function ProductSpecCard({
   autoPlayInterval = 4000,
   imageShape = false,
   compactTop = false,
+  titleClassName = "",
 }) {
   const gallery = images && images.length > 0 ? images : image ? [image] : [];
   const isCarousel = gallery.length > 1;
@@ -127,9 +128,10 @@ export default function ProductSpecCard({
             <WordReveal
               text={title}
               className={
-                imageShape
+                titleClassName ||
+                (imageShape
                   ? "mb-6 max-w-xl font-display text-3xl font-medium leading-[1.08] tracking-[-0.02em] text-ink sm:text-4xl lg:text-5xl"
-                  : "mb-6 font-display text-3xl font-medium leading-[1.1] tracking-[-0.02em] text-ink lg:text-5xl"
+                  : "mb-6 font-display text-3xl font-medium leading-[1.1] tracking-[-0.02em] text-ink lg:text-5xl")
               }
             />
             <p className={imageShape

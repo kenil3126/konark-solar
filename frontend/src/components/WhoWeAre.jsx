@@ -35,44 +35,6 @@ export default function WhoWeAre() {
                 loading="lazy"
               />
             </div>
-            <div className="absolute -bottom-8 -left-8 h-24 w-24 rounded-full bg-paper p-1 shadow-lg ring-2 ring-sun sm:-bottom-10 sm:-left-10 sm:h-28 sm:w-28">
-              <svg
-                viewBox="0 0 120 120"
-                role="img"
-                aria-label="Konark"
-                className="h-full w-full motion-safe:animate-spin"
-                style={{ animationDuration: "18s" }}
-              >
-                <defs>
-                  <path
-                    id="konark-badge-circle"
-                    d="M 60,60 m -43,0 a 43,43 0 1,1 86,0 a 43,43 0 1,1 -86,0"
-                  />
-                </defs>
-                <text
-                  fill="var(--color-forest)"
-                  fontSize="9"
-                  fontWeight="700"
-                  letterSpacing="1.5"
-                >
-                  <textPath
-                    href="#konark-badge-circle"
-                    textLength="270"
-                    lengthAdjust="spacing"
-                  >
-                    KONARK<tspan fill="var(--color-sun)"> • </tspan>
-                    KONARK<tspan fill="var(--color-sun)"> • </tspan>
-                    KONARK<tspan fill="var(--color-sun)"> • </tspan>
-                    KONARK<tspan fill="var(--color-sun)"> • </tspan>
-                  </textPath>
-                </text>
-              </svg>
-              <img
-                src="/assets/konark-logo.png"
-                alt="Konark"
-                className="absolute left-1/2 top-1/2 w-14 max-w-[65%] -translate-x-1/2 -translate-y-1/2"
-              />
-            </div>
           </div>
         </Reveal>
       </div>

@@ -33,7 +33,7 @@ export default function MissionBanner() {
           </div>
           <WordReveal
             as="p"
-            text="To accelerate the transition to clean energy by delivering reliable technology, engineering excellence, and solutions focused on customer needs."
+            text="To accelerate the transition to clean energy by engineering excellence, focusing on customer needs, and delivering reliable technology."
             className="font-display text-xl font-medium leading-[1.35] tracking-[-0.01em] sm:text-2xl lg:text-3xl xl:text-4xl"
           />
         </div>

@@ -27,15 +27,6 @@ const visionPoints = [
     ),
   },
   {
-    text: "Accelerate the transition toward renewable and clean energy",
-    icon: (
-      <>
-        <path d="M5 19c0-9 5-14 14-14 0 9-5 14-13 14" />
-        <path d="M5 19c3-5 6-8 10-10" />
-      </>
-    ),
-  },
-  {
     text: "Enable energy independence through advanced Solar & Energy Storage technologies",
     icon: (
       <>
@@ -66,6 +57,15 @@ const visionPoints = [
 ];
 
 const missionPoints = [
+  {
+    text: "Accelerate the transition toward renewable and clean energy",
+    icon: (
+      <>
+        <path d="M5 19c0-9 5-14 14-14 0 9-5 14-13 14" />
+        <path d="M5 19c3-5 6-8 10-10" />
+      </>
+    ),
+  },
   {
     text: "Deliver high-quality Solar and Energy Storage solutions",
     icon: (

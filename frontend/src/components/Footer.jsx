@@ -41,7 +41,7 @@ export default function Footer() {
         <Reveal>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
             <div>
-              <h5 className="text-base lg:text-lg font-semibold tracking-wide text-sun-light mb-4 pb-3 border-b border-white/15">Our Base</h5>
+              <h5 className="text-base lg:text-lg font-semibold tracking-wide text-sun-light mb-4 pb-3 border-b border-white/15">Our Headquarters</h5>
               <p className="text-sm text-paper/70 leading-relaxed">{company.address}</p>
             </div>
             <div>

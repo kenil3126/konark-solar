@@ -2,7 +2,6 @@ import Hero from "../components/Hero";
 import WhoWeAre from "../components/WhoWeAre";
 import MissionBanner from "../components/MissionBanner";
 import ProductStack from "../components/ProductStack";
-import Marquee from "../components/Marquee";
 import SectorsCarousel from "../components/SectorsCarousel";
 import Certifications from "../components/Certifications";
 import CTABanner from "../components/CTABanner";
@@ -12,15 +11,13 @@ export default function Home() {
     <>
       <Hero
         eyebrow="Battery Energy Storage Systems"
-        title="Intelligent energy storage systems"
+        title="Intelligent Energy Storage Systems"
         subtitle="Engineered to enhance power efficiency, provide energy security and facilitate seamless integration of renewable energy sources."
         ctaLabel="Explore Energy Storage Solutions"
         ctaTo="/energy-storage/electric-energy-storage"
         tone="light"
         backgroundImage="/assets/hero-energy-storage-bg.png"
       />
-
-      <Marquee />
 
       <section className="relative overflow-hidden border-y border-line bg-paper-dim py-16 sm:py-20 lg:py-24">
         <div
@@ -34,8 +31,8 @@ export default function Home() {
               Intelligent energy storage
             </p>
             <h2 className="max-w-3xl font-display text-2xl font-semibold leading-[1.2] tracking-[-0.02em] text-ink sm:text-3xl lg:text-4xl">
-              Powering Solar Modules with intelligent Energy Storage for seamless,
-              round-the-clock energy independence.
+              Pairing Solar Modules with Intelligent Energy Storage Systems to
+              provide seamless round the clock Energy Independence.
             </h2>
           </div>
           <div className="lg:col-span-5">
@@ -65,7 +62,6 @@ export default function Home() {
       </section>
 
       <Hero
-        eyebrow="Solar PV Modules"
         title="Powering the future with high-efficiency PV modules engineered for endurance"
         subtitle="From residential rooftop to utility-scale projects, Konark delivers cutting-edge technology tailored for maximum yield."
         ctaLabel="Explore Solar Modules"
@@ -81,18 +77,16 @@ export default function Home() {
       <ProductStack
         items={[
           {
-            eyebrow: "Solar PV Modules",
             title: "Solar PV Modules",
-            copy: "High-efficiency monocrystalline modules engineered using advanced technologies like TOPCon and bifacial cells, designed to achieve superior output exceeding 22-24% efficiency and providing long-term reliability, making them highly effective for large-scale deployments.",
+            copy: "High-efficiency monocrystalline solar modules featuring advanced TOPCon and bifacial technologies deliver exceptional performance, with efficiency exceeding 22–24%. Engineered for long-term reliability, they maximize energy generation and provide an ideal solution for large-scale solar installations.",
             ctaLabel: "Know More",
             ctaTo: "/solar-modules/n-type",
             image: "/assets/solar-pv-modules.png",
             imageAlt: "Solar PV Modules",
           },
           {
-            eyebrow: "Battery Energy Storage",
             title: "Energy Storage Systems",
-            copy: "Smart energy storage systems designed to enhance reliability and efficiency and provide intelligent energy management by enabling peak shaving, load balancing, backup power and renewable integration for uninterrupted energy supply.",
+            copy: "Smart energy storage systems engineered to maximize efficiency and reliability through intelligent energy management. Featuring peak shaving, load balancing, backup power, and seamless renewable energy integration, these solutions ensure a stable and uninterrupted power supply.",
             ctaLabel: "Know More",
             ctaTo: "/energy-storage/electric-energy-storage",
             image: "/assets/energy-storage.png",

@@ -1,4 +1,4 @@
-import { Mail, Phone, MapPin } from "lucide-react";
+import { Mail, MapPin, Phone } from "lucide-react";
 import Hero from "../components/Hero";
 import Reveal from "../components/Reveal";
 import WordReveal from "../components/WordReveal";
@@ -9,7 +9,7 @@ export default function Contact() {
     <>
       <Hero
         eyebrow="Get In Touch"
-        title="Let's talk about your energy project"
+        title="Let's talk about your Energy Project"
         subtitle="Tell us about your residential, commercial or utility-scale requirement — our team will follow up shortly."
         tone="dark"
       />
@@ -28,7 +28,7 @@ export default function Contact() {
                     <MapPin size={18} />
                   </div>
                   <div>
-                    <p className="text-xs font-semibold tracking-wide text-slate mb-1">Our Base</p>
+                    <p className="text-xs font-semibold tracking-wide text-slate mb-1">Main Office</p>
                     <p className="text-ink leading-relaxed">{company.address}</p>
                   </div>
                 </div>
@@ -51,9 +51,6 @@ export default function Contact() {
                   </div>
                   <div>
                     <p className="text-xs font-semibold tracking-wide text-slate mb-1">Phone</p>
-                    <a href={company.phoneHref} className="text-ink hover:text-forest">
-                      {company.phone}
-                    </a>
                   </div>
                 </div>
               </div>

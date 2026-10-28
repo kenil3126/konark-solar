@@ -13,13 +13,13 @@ const sectors = [
     title: "Commercial & Industrial",
     image: "/assets/sector-commercial.jpg",
     alt: "Solar PV Modules Setup for Factories and Industrial Units",
-    copy: "Robust solar and BESS solutions engineered for heavy loads, peak demand management, and uninterrupted power for industrial operations.",
+    copy: "Robust solar and BESS solutions designed for heavy loads, peak demand management, and uninterrupted power for industrial operations.",
   },
   {
     title: "Data Centers",
-    image: "/assets/sector-datacenter.jpg",
-    alt: "Solar Panels Solutions for Data Centers",
-    copy: "Advanced, stable, and scalable energy systems delivering high uptime, clean power, and precise load management for mission-critical infrastructure.",
+    image: "/assets/data-center-sector-image.png",
+    alt: "Modern data center server room with rows of servers",
+    copy: "Powering mission-critical infrastructure with reliable, scalable energy solutions that maximize uptime, deliver clean energy, and ensure precise load management.",
   },
   {
     title: "Utility-Scale Solar Farms",
