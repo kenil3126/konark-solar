@@ -81,16 +81,16 @@ export default function Home() {
             copy: "High-efficiency monocrystalline solar modules featuring advanced TOPCon and bifacial technologies deliver exceptional performance, with efficiency exceeding 22–24%. Engineered for long-term reliability, they maximize energy generation and provide an ideal solution for large-scale solar installations.",
             ctaLabel: "Know More",
             ctaTo: "/solar-modules/n-type",
-            image: "/assets/solar-pv-modules.png",
-            imageAlt: "Solar PV Modules",
+            image: "/assets/home-solar-pv-sunset.png",
+            imageAlt: "Solar PV modules reflecting the setting sun",
           },
           {
             title: "Energy Storage Systems",
             copy: "Smart energy storage systems engineered to maximize efficiency and reliability through intelligent energy management. Featuring peak shaving, load balancing, backup power, and seamless renewable energy integration, these solutions ensure a stable and uninterrupted power supply.",
             ctaLabel: "Know More",
             ctaTo: "/energy-storage/electric-energy-storage",
-            image: "/assets/energy-storage.png",
-            imageAlt: "Energy Storage Systems",
+            image: "/assets/home-energy-storage-sunset.png",
+            imageAlt: "Solar panels and battery energy storage at sunset",
           },
         ]}
       />

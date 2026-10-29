@@ -39,12 +39,16 @@ export default function SodiumBatteryEnergyStorage() {
                 COSPOWERS Partnership
               </p>
               <p className="border-t border-line pt-6 text-lg leading-relaxed text-ink-soft lg:text-xl">
-                Konark is proud to partner with <strong className="text-ink">COSPOWERS</strong>, a
-                global pioneer in sodium battery energy storage systems, to establish cutting edge
-                sodium battery energy storage solutions throughout Asia. Through COSPOWERS, Konark
-                provides a series of{" "}
-                <strong className="text-ink">Power-Sodium, Smart Sodium and Industrial &amp; Commercial Sodium</strong>{" "}
-                battery energy storage systems for flexible deployment and multiple scenarios.
+                Konark expands its energy storage portfolio through its partnership with{" "}
+                <strong className="text-ink">COSPOWERS</strong>, a global innovator in sodium
+                battery technology. Serving the North American market, the collaboration brings
+                together a versatile range of sodium-based storage solutions, including{" "}
+                <strong className="text-ink">
+                  Power-Sodium, Smart Sodium, and Industrial &amp; Commercial Sodium
+                </strong>{" "}
+                systems. Designed to accommodate diverse operating requirements, these
+                technologies offer flexible deployment options across a wide variety of
+                applications.
               </p>
             </div>
           </Reveal>
@@ -67,7 +71,6 @@ export default function SodiumBatteryEnergyStorage() {
         copy="Next-generation sodium-ion energy storage systems offering a safer, more resource-abundant chemistry — deployed across Power-Sodium, Smart Sodium and Industrial & Commercial Sodium configurations for flexible, multi-scenario projects."
         stat="Na⁺"
         statLabel="Sodium-Ion Chemistry"
-        tags={["Power-Sodium", "Smart Sodium", "Industrial & Commercial Sodium", "Flexible Deployment"]}
         images={[
           "/assets/sodium-battery-1.png",
           "/assets/sodium-battery-2.png",
@@ -83,7 +86,7 @@ export default function SodiumBatteryEnergyStorage() {
         primaryHref="https://en.cospowers.com/products/cate/97.html"
         secondaryLabel="Download Brochure"
         secondaryHref="https://en.cospowers.com/"
-        tertiaryLabel="Enquire Now"
+        tertiaryLabel="Inquire Now"
         tertiaryTo="/contact"
       />
 

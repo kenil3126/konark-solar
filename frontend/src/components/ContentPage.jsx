@@ -3,7 +3,7 @@ import Reveal from "./Reveal";
 import WordReveal from "./WordReveal";
 import CTABanner from "./CTABanner";
 
-export default function ContentPage({ eyebrow, title, subtitle, sections }) {
+export default function ContentPage({ eyebrow, title, subtitle, sections, showPlaceholder = true }) {
   return (
     <>
       <Hero eyebrow={eyebrow} title={title} subtitle={subtitle} tone="dark" />
@@ -21,17 +21,19 @@ export default function ContentPage({ eyebrow, title, subtitle, sections }) {
             ))}
           </div>
 
-          <Reveal className="mt-16">
-            <div className="rounded-sm border border-dashed border-line bg-paper-dim px-6 py-8 text-center">
-              <p className="text-xs font-semibold tracking-wide text-forest-light mb-2">
-                Content Placeholder
-              </p>
-              <p className="text-sm text-slate">
-                This page is styled and wired up — final copy, specs and imagery for this
-                section will be added here.
-              </p>
-            </div>
-          </Reveal>
+          {showPlaceholder && (
+            <Reveal className="mt-16">
+              <div className="rounded-sm border border-dashed border-line bg-paper-dim px-6 py-8 text-center">
+                <p className="text-xs font-semibold tracking-wide text-forest-light mb-2">
+                  Content Placeholder
+                </p>
+                <p className="text-sm text-slate">
+                  This page is styled and wired up — final copy, specs and imagery for this
+                  section will be added here.
+                </p>
+              </div>
+            </Reveal>
+          )}
         </div>
       </section>
 

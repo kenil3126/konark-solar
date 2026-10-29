@@ -4,16 +4,17 @@ export default function EnergyStorage() {
   return (
     <ContentPage
       eyebrow="Battery Energy Storage Systems"
-      title="Intelligent energy storage for round-the-clock reliability"
-      subtitle="Electric, Industrial & Commercial, Communication, Data Center, Household and Sodium Battery storage solutions."
+      title="Intelligent Energy Storage for round-the-clock reliability"
+      subtitle="LIFP and Na+ energy storage solutions for electric power, industrial and commercial applications, telecommunications, data centers and residential use."
+      showPlaceholder={false}
       sections={[
         {
           heading: "Smart Energy Management",
-          copy: "Smart energy storage systems designed to enhance reliability and efficiency, enabling peak shaving, load balancing, backup power and renewable integration for uninterrupted energy supply.",
+          copy: "Smart energy storage systems engineered to enhance reliability and efficiency through peak shaving, load balancing, backup power, and renewable energy integration – ensuring a stable, uninterrupted power supply.",
         },
         {
           heading: "Engineered For Every Sector",
-          copy: "Deployed across residential, commercial, industrial, telecom and utility-scale environments, our BESS platforms are built for energy security and seamless renewable integration.",
+          copy: "Deployed across residential, commercial, industrial, telecommunications, and utility-scale environments, our BESS platforms deliver reliable energy security and seamless renewable energy integration.",
         },
       ]}
     />

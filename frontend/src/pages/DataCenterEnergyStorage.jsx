@@ -39,12 +39,13 @@ export default function DataCenterEnergyStorage() {
                 COSPOWERS Partnership
               </p>
               <p className="border-t border-line pt-6 text-lg leading-relaxed text-ink-soft lg:text-xl">
-                Konark is proud to partner with <strong className="text-ink">COSPOWERS</strong>, a
-                global pioneer in data center energy storage systems, to establish cutting edge
-                data center energy storage solutions throughout Asia. Through COSPOWERS, Konark
-                provides a series of <strong className="text-ink">5min–60min+</strong> energy
-                storage systems for the construction of "
-                <strong className="text-ink">intelligent server room</strong>".
+                Konark works with "<strong className="text-ink">COSPOWERS</strong>", a global
+                innovator in data center energy storage technology, to deliver advanced power
+                solutions tailored to modern digital infrastructure across North America. Its
+                portfolio includes energy storage systems with backup durations ranging from "
+                <strong className="text-ink">5 minutes to 60 minutes or more</strong>", supporting
+                the development of "<strong className="text-ink">intelligent server rooms</strong>"
+                with dependable power continuity and enhanced operational resilience.
               </p>
             </div>
           </Reveal>
@@ -72,10 +73,9 @@ export default function DataCenterEnergyStorage() {
       <ProductSpecCard
         eyebrow="COSPOWERS Partnership"
         title="Outdoor Cabinet Energy Storage for Data Centers"
-        copy="Weatherproof outdoor energy storage cabinets deployed alongside server racks — delivering flexible 5 minute to 60 minute+ backup runtimes to support the construction of resilient, intelligent server rooms."
+        copy="Weatherproof outdoor energy storage cabinets deployed alongside server racks — delivering flexible 5 minute to 60 minute+ backup runtimes."
         stat="5–60min+"
         statLabel="Backup Runtime"
-        tags={["Intelligent Server Room", "Outdoor Cabinet", "Scalable Runtime", "Data Center"]}
         images={[
           "/assets/data-center-cabinet-1.png",
           "/assets/data-center-cabinet-2.png",
@@ -91,7 +91,7 @@ export default function DataCenterEnergyStorage() {
         primaryHref="https://en.cospowers.com/products/cate/97.html"
         secondaryLabel="Download Brochure"
         secondaryHref="https://en.cospowers.com/"
-        tertiaryLabel="Enquire Now"
+        tertiaryLabel="Inquire Now"
         tertiaryTo="/contact"
       />
 

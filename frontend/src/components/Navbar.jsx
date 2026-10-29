@@ -40,13 +40,11 @@ export default function Navbar() {
 
       {/* Main bar */}
       <div
-        className={`border-b transition-colors duration-300 ${
-          scrolled ? "bg-white border-line" : "bg-transparent border-white/15"
-        }`}
+        className="border-b border-line bg-white shadow-[0_8px_24px_rgba(11,61,49,0.12)]"
       >
         <div className="mx-auto max-w-7xl px-5 lg:px-8 flex items-center justify-between h-20">
           <Link to="/" className="flex items-center gap-2 shrink-0">
-            <img src="/assets/konark-logo.png" alt="Konark Energy" className={`h-8 md:h-9 w-auto transition-[filter] ${scrolled ? "" : "brightness-0 invert"}`} />
+            <img src="/assets/konark-logo.png" alt="Konark Energy" className="h-12 md:h-14 w-auto" />
           </Link>
 
           <nav className="hidden lg:flex items-center gap-1">
@@ -62,9 +60,7 @@ export default function Navbar() {
                   onClick={() => setOpenChild(null)}
                   className={({ isActive }) =>
                     `group relative flex items-center gap-1 px-4 h-20 text-[12px] font-semibold tracking-[0.08em] uppercase ${
-                      scrolled
-                        ? isActive ? "text-ink" : "text-ink-soft hover:text-ink"
-                        : isActive ? "text-white" : "text-white/75 hover:text-white"
+                      isActive ? "text-ink" : "text-ink-soft hover:text-ink"
                     }`
                   }
                 >
@@ -133,7 +129,7 @@ export default function Navbar() {
           </nav>
 
           <button
-            className={`lg:hidden ${scrolled ? "text-ink" : "text-white"}`}
+            className="lg:hidden text-ink"
             onClick={() => setOpen((v) => !v)}
             aria-label="Toggle menu"
           >

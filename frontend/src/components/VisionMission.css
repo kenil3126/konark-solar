@@ -8,7 +8,7 @@
   --o2: #f6a45c;
   background: #f2f5f3;
   padding: 56px 20px;
-  font-family: var(--font-body, "Hanken Grotesk", system-ui, sans-serif);
+  font-family: var(--font-body, "Inter", system-ui, sans-serif);
 }
 .vm * { box-sizing: border-box; }
 
@@ -68,7 +68,7 @@
 .vm-m .vm-hi { background: #fcebdd; }
 .vm-h h2 {
   margin: 0;
-  font-family: var(--font-display, "Newsreader", Georgia, serif);
+  font-family: var(--font-display, "Inter", system-ui, sans-serif);
   font-weight: 500;
   font-size: 28px;
   line-height: 1.1;

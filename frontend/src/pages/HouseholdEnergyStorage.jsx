@@ -42,10 +42,13 @@ export default function HouseholdEnergyStorage() {
                 Reliable Energy Storage for Modern Homes
               </h2>
               <p className="border-t border-line pt-6 text-lg leading-relaxed text-ink-soft lg:text-xl">
-                Konark partners with <strong className="text-ink">COSPOWERS</strong>, a global
-                specialist in household energy storage, to bring advanced residential solutions
-                to markets across Asia. The product range supports home energy storage systems
-                from <strong className="text-ink">5 kW to 30 kW</strong>.
+                Through its collaboration with{" "}
+                <strong className="text-ink">COSPOWERS</strong>, a global specialist in
+                residential energy storage, Konark delivers advanced home energy solutions
+                designed to meet a variety of household power needs across North America. The
+                product range features residential energy storage systems ranging from{" "}
+                <strong className="text-ink">5 kW to 30 kW</strong>, giving homeowners flexible
+                options for managing energy use.
               </p>
             </div>
           </Reveal>
@@ -65,10 +68,9 @@ export default function HouseholdEnergyStorage() {
       <ProductSpecCard
         eyebrow="COSPOWERS Partnership"
         title="Stackable Home Energy Storage Systems"
-        copy="Sleek, stackable residential storage units designed to blend into any home — pairing with rooftop solar to deliver backup power, self-consumption and energy independence for homeowners."
+        copy="Sleek, stackable residential energy storage units designed to blend into any home — pairing with rooftop solar to deliver backup power, self-consumption and energy independence for homeowners."
         stat="5–30kW"
         statLabel="Residential Range"
-        tags={["Residential Storage", "Stackable Modules", "Solar-Ready", "5kW–30kW"]}
         images={[
           "/assets/household-storage-1.png",
           "/assets/household-storage-2.png",
@@ -86,7 +88,7 @@ export default function HouseholdEnergyStorage() {
         primaryHref="https://en.cospowers.com/products/cate/98.html"
         secondaryLabel="Download Brochure"
         secondaryHref="https://en.cospowers.com/"
-        tertiaryLabel="Enquire Now"
+        tertiaryLabel="Inquire Now"
         tertiaryTo="/contact"
       />
 

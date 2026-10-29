@@ -7,7 +7,7 @@ export default function ButtonRow({
   primaryHref,
   secondaryLabel = "Download Brochure",
   secondaryHref = "#",
-  tertiaryLabel = "Enquire Now",
+  tertiaryLabel = "Inquire Now",
   tertiaryTo = "/contact",
 }) {
   const primaryActionProps = primaryHref

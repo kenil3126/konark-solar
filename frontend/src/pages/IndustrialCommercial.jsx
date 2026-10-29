@@ -4,7 +4,7 @@ import ProductSpecCard from "../components/ProductSpecCard";
 import ButtonRow from "../components/ButtonRow";
 import CertBadges from "../components/CertBadges";
 import CTABanner from "../components/CTABanner";
-import { BatteryCharging, Boxes, Factory, Globe2, Settings2 } from "lucide-react";
+import { Boxes, Factory, Globe2, Settings2 } from "lucide-react";
 
 const certs = [
   "IEC",
@@ -25,7 +25,7 @@ const solutionHighlights = [
   { label: "Industrial &\nCommercial Use", icon: Factory },
   { label: "All-Scenario\nProducts", icon: Boxes },
   { label: "One-Stop\nSolutions", icon: Settings2 },
-  { label: "Across\nAsia", icon: Globe2 },
+  { label: "Global", icon: Globe2 },
 ];
 
 export default function IndustrialCommercial() {
@@ -41,22 +41,16 @@ export default function IndustrialCommercial() {
       <section className="relative overflow-hidden bg-paper pb-10 pt-16 lg:pb-14 lg:pt-24">
         <div className="mx-auto grid max-w-[1600px] items-start gap-12 px-5 lg:grid-cols-[0.85fr_1.15fr] lg:gap-16 lg:px-8 xl:px-10">
           <Reveal className="relative z-10">
-            <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-forest/15 bg-paper-dim px-4 py-2 text-xs font-semibold uppercase tracking-[0.16em] text-forest">
-              <BatteryCharging size={16} aria-hidden="true" />
-              COSPOWERS Industrial Solutions
-            </div>
             <h2 className="mb-6 max-w-xl font-display text-[2rem] font-medium leading-[1.12] tracking-[-0.025em] text-ink sm:text-[2.35rem] lg:text-[2.625rem]">
               <span className="block text-sun">One-stop solutions</span>
               <span className="block">for every energy storage application.</span>
             </h2>
             <p className="max-w-xl text-base leading-relaxed text-ink-soft lg:text-lg">
-              Konark is proud to partner with <strong className="text-ink">COSPOWERS</strong>, a
-              global pioneer in industrial and commercial energy storage systems, to establish
-              cutting edge industrial and commercial energy storage solutions throughout Asia.
-              Through COSPOWERS, Konark provides{" "}
-              <strong className="text-ink">all-scenario products</strong> and{" "}
-              <strong className="text-ink">one-stop solutions</strong> for diversified Commercial
-              and Industrial Energy Storage applications.
+              Through its partnership with COSPOWERS, a global leader in industrial and
+              commercial energy storage, Konark brings versatile, end-to-end energy solutions to
+              the North American market. From tailored storage products to fully integrated
+              systems, Konark supports a broad range of commercial and industrial applications
+              with solutions designed to meet diverse energy demands.
             </p>
           </Reveal>
 
@@ -101,7 +95,6 @@ export default function IndustrialCommercial() {
         copy="Compact, weatherproof storage cabinets engineered for on-site deployment at commercial and industrial facilities — enabling peak shaving, demand charge reduction and backup power with a small footprint."
         stat="250KW / 446KWh"
         statLabel="Power / Capacity"
-        tags={["All-Scenario Products", "One-Stop Solutions", "Commercial", "Industrial"]}
         images={[
           "/assets/industrial-commercial-cabinet-1.png",
           "/assets/industrial-commercial-cabinet-2.png",
@@ -118,7 +111,7 @@ export default function IndustrialCommercial() {
         primaryHref="https://en.cospowers.com/products/cate/112.html"
         secondaryLabel="Download Brochure"
         secondaryHref="https://en.cospowers.com/"
-        tertiaryLabel="Enquire Now"
+        tertiaryLabel="Inquire Now"
         tertiaryTo="/contact"
       />
 

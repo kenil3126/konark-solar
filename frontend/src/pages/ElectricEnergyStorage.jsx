@@ -47,7 +47,7 @@ const storageSystems = [
     number: "04",
     title: "EMS",
     subtitle: "Energy Management",
-    description: "Intelligently optimises how energy is stored, dispatched and used.",
+    description: "Intelligently optimizes how energy is stored, dispatched and used.",
     icon: Gauge,
   },
 ];
@@ -56,7 +56,6 @@ export default function ElectricEnergyStorage() {
   return (
     <>
       <Hero
-        eyebrow="Energy Storage"
         title="Electric Energy Storage Products"
         tone="light"
         backgroundImage="/assets/hero-electric-energy-storage-bg.png"
@@ -70,18 +69,21 @@ export default function ElectricEnergyStorage() {
               COSPOWERS Technology Partner
             </div>
             <h2 className="mb-6 max-w-xl font-display text-3xl font-medium leading-tight text-ink sm:text-4xl lg:text-5xl">
-              Reliable storage for a cleaner energy future.
+              Reliable energy storage for a cleaner future.
             </h2>
             <p className="max-w-xl text-base leading-relaxed text-ink-soft lg:text-lg">
-              Konark is proud to partner with <strong className="text-ink">COSPOWERS</strong>, a
-              global pioneer in battery energy storage systems, to establish cutting edge
-              electric energy storage solutions throughout Asia. Through COSPOWERS, Konark
-              provides energy storage core equipments such as{" "}
-              <strong className="text-ink">energy storage batteries, PCS, BMS, EMS</strong> as
-              well as{" "}
+              Konark is proud to partner with COSPOWERS, a global pioneer in battery energy
+              storage systems, to deliver cutting-edge energy storage solutions in North
+              America. Through this partnership, Konark offers essential energy storage
+              equipment, including{" "}
               <strong className="text-ink">
-                power energy storage system integration solutions, industrial and commercial
-                energy storage system integration solutions
+                energy storage batteries, Power Conversion Systems (PCS), Battery Management
+                Systems (BMS), and Energy Management Systems (EMS)
+              </strong>
+              , along with integrated solutions for{" "}
+              <strong className="text-ink">
+                utility-scale power storage and industrial and commercial energy storage
+                applications
               </strong>
               .
             </p>
@@ -89,14 +91,10 @@ export default function ElectricEnergyStorage() {
           </Reveal>
 
           <Reveal delay={0.1} className="relative w-full lg:mt-14">
-            <div
-              aria-hidden="true"
-              className="absolute -right-5 -top-5 h-32 w-32 rounded-full border border-sun/40 sm:-right-7 sm:-top-7 sm:h-44 sm:w-44"
-            />
             <div className="relative overflow-hidden rounded-[2rem] rounded-bl-[6rem] border border-forest/10 bg-paper-dim shadow-[0_24px_60px_rgba(11,74,56,0.12)]">
               <img
-                src="/assets/energy-storage-banner.png"
-                alt="Konark energy storage for a sustainable tomorrow, featuring a utility-scale battery storage system"
+                src="/assets/electric-energy-storage-sustainability.png"
+                alt="Energy storage for a sustainable tomorrow with solar panels, wind turbines, and utility-scale battery storage"
                 className="aspect-[2/1] w-full object-cover"
               />
             </div>
@@ -156,7 +154,7 @@ export default function ElectricEnergyStorage() {
       <ProductSpecCard
         eyebrow="COSPOWERS Partnership"
         title="Containerized Energy Storage Systems"
-        copy="Utility-grade energy storage containers engineered for high round-trip efficiency, long cycle life and safe operation — built to promote ecological conservation and share clean energy across Asia's grids."
+        copy="Utility-grade energy storage containers engineered for high round-trip efficiency, long cycle life and safe operation — built to promote ecological conservation and deliver clean energy across North America's power grids."
         tags={["Energy Storage Batteries", "PCS", "BMS", "EMS", "System Integration"]}
         images={[
           "/assets/container-ess-1.png",
@@ -172,7 +170,7 @@ export default function ElectricEnergyStorage() {
         primaryHref="https://en.cospowers.com/products/cate/95.html"
         secondaryLabel="Download Brochure"
         secondaryHref="https://en.cospowers.com/"
-        tertiaryLabel="Enquire Now"
+        tertiaryLabel="Inquire Now"
         tertiaryTo="/contact"
       />
 

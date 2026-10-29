@@ -8,7 +8,7 @@
   --o2: #f6a45c;
   background: var(--g2);
   padding: 64px 20px;
-  font-family: var(--font-body, "Hanken Grotesk", system-ui, sans-serif);
+  font-family: var(--font-body, "Inter", system-ui, sans-serif);
 }
 .sp * { box-sizing: border-box; }
 .sp-in { max-width: 1216px; margin: 0 auto; }
@@ -16,7 +16,7 @@
 .sp-head { text-align: center; margin-bottom: 36px; }
 .sp-head h2 {
   margin: 0;
-  font-family: var(--font-display, "Newsreader", Georgia, serif);
+  font-family: var(--font-display, "Inter", system-ui, sans-serif);
   font-weight: 500;
   font-size: 32px;
   letter-spacing: -0.015em;

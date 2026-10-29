@@ -71,7 +71,7 @@ export default function PrismaticLithiumIon() {
         primaryHref="https://en.cospowers.com/solution/cndx.html"
         secondaryLabel="Specification Sheet"
         secondaryHref="https://en.cospowers.com/web/upload/2026/04/13/17760648342943b6wsu.pdf"
-        tertiaryLabel="Enquire Now"
+        tertiaryLabel="Inquire Now"
         tertiaryTo="/contact"
       />
 

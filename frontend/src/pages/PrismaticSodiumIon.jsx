@@ -74,7 +74,7 @@ export default function PrismaticSodiumIon() {
         primaryHref="https://en.cospowers.com/solution/cndx/223.html"
         secondaryLabel="Specification Sheet"
         secondaryHref="https://en.cospowers.com/web/upload/2026/04/13/17760648342943b6wsu.pdf"
-        tertiaryLabel="Enquire Now"
+        tertiaryLabel="Inquire Now"
         tertiaryTo="/contact"
       />
 

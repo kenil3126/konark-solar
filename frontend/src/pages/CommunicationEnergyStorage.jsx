@@ -1,4 +1,4 @@
-import { Leaf, RadioTower, ShieldCheck, Zap } from "lucide-react";
+import { Leaf, ShieldCheck, Zap } from "lucide-react";
 import { motion } from "framer-motion";
 import Hero from "../components/Hero";
 import Reveal from "../components/Reveal";
@@ -38,11 +38,6 @@ const benefits = [
     Icon: Leaf,
     hover: { scale: [1, 1.15, 1], rotate: [0, -16, 10, 0] },
   },
-  {
-    label: "Stronger Connectivity",
-    Icon: RadioTower,
-    hover: { scale: [1, 1.2, 1], y: [0, -3, 0] },
-  },
 ];
 
 export default function CommunicationEnergyStorage() {
@@ -58,33 +53,16 @@ export default function CommunicationEnergyStorage() {
       <section className="bg-gradient-to-br from-paper via-white to-[#edf4ef] py-16 lg:py-24">
         <div className="mx-auto grid max-w-7xl items-center gap-8 px-5 lg:grid-cols-[0.95fr_1.15fr] lg:gap-12 lg:px-8">
           <Reveal>
-            <div className="mb-5 inline-flex items-center gap-3">
-              <span className="h-px w-8 bg-sun" />
-              <p className="text-xs font-semibold uppercase tracking-[0.16em] text-forest-light sm:text-[13px]">
-                Green Base Station Solutions
-              </p>
-            </div>
             <h2 className="mb-6 max-w-xl font-display text-2xl font-medium leading-[1.12] tracking-[-0.02em] text-ink sm:text-3xl lg:text-4xl">
-              Reliable power for a connected, lower-carbon world
+              Reliable power for a connected, Low-carbon world
             </h2>
             <p className="max-w-xl border-t border-line pt-6 text-base leading-relaxed text-slate lg:text-lg">
-              Konark is proud to partner with <strong className="text-ink">COSPOWERS</strong>, a
-              global pioneer in communication energy storage systems, to establish cutting edge
-              communication energy storage solutions throughout Asia. Through COSPOWERS, Konark
-              provides a full range of safe and efficient{" "}
-              <strong className="text-ink">48V</strong> energy storage systems for{" "}
-              <strong className="text-ink">green base stations</strong> in the digital era.
+              To support the evolving demands of modern telecommunications, Konark collaborates
+              with COSPOWERS, a global innovator in communication energy storage technology.
+              Together, we deliver a comprehensive range of safe, efficient 48V energy storage
+              systems designed for green base stations, helping strengthen network reliability
+              while advancing energy efficiency and sustainability across North America.
             </p>
-            <div className="mt-7 flex flex-wrap gap-2.5">
-              {["48V Energy Storage", "Telecom Backup", "Lower-Carbon Connectivity"].map((item) => (
-                <span
-                  key={item}
-                  className="inline-flex items-center rounded-full border border-forest/15 bg-white/80 px-4 py-2 text-xs font-semibold text-forest shadow-sm"
-                >
-                  {item}
-                </span>
-              ))}
-            </div>
           </Reveal>
           <Reveal delay={0.1}>
             <figure className="overflow-hidden rounded-[1.75rem] border border-white/80 bg-white shadow-[0_24px_60px_rgba(11,74,56,0.16)]">
@@ -98,7 +76,7 @@ export default function CommunicationEnergyStorage() {
           <Reveal delay={0.15} className="lg:col-span-2">
             <ul
               aria-label="Green base station benefits"
-              className="grid grid-cols-2 gap-px overflow-hidden rounded-2xl border border-white/10 bg-white/20 text-white shadow-[0_18px_45px_rgba(11,74,56,0.18)] lg:grid-cols-4"
+              className="grid grid-cols-2 gap-px overflow-hidden rounded-2xl border border-white/10 bg-white/20 text-white shadow-[0_18px_45px_rgba(11,74,56,0.18)] lg:grid-cols-3"
             >
               {benefits.map(({ label, Icon, hover }) => (
                 <li
@@ -148,7 +126,7 @@ export default function CommunicationEnergyStorage() {
         primaryHref="https://en.cospowers.com/products/cate/96.html"
         secondaryLabel="Download Brochure"
         secondaryHref="https://en.cospowers.com/"
-        tertiaryLabel="Enquire Now"
+        tertiaryLabel="Inquire Now"
         tertiaryTo="/contact"
       />
 
